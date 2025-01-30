@@ -1,5 +1,7 @@
-let count = 1;
-setInterval(function () {
-  document.getElementById("counter").innerHTML = count;
-  count++;
-}, 1000);
+// let count = 1;
+// setInterval(function () {
+//   document
+//   .getElementById("counter")
+//   .appendChild(document.createTextNode(count + " "));
+//   count++;
+// }, 1000);
