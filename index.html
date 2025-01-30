@@ -9,64 +9,32 @@
     <script type="text/javascript" src="/scripts.js" defer></script>
 
     <style>
-        body {
-            counter-reset: data-list;
-        }
 
-
-        dd::before {
-            content: counter(data-list) ". ";
-            counter-increment: data-list;
-        }
     </style>
 </head>
 
 <body>
 
-    <dl id="data-list">
-        <dt>Sri Lankan</dt>
-        <dd>Koththu</dd>
-        <dd>Parata</dd>
-        <dd>Fried Rice</dd>
-        <dd>Hoppers</dd>
-        <dt>Japanese</dt>
-        <dd>Soup</dd>
-    </dl>
-
-
-    <ul>
-        <li>
-            list item 1
-        </li>
-        <li>
-            list item 2
-        </li>
-        <li>
-            list item 3
-        </li>
-    </ul>
-
-    <ol start="1" type="I" id="list">
-        <li>
-            list item 1
-        </li>
-        <li>
-            list item 2
-        </li>
-        <li>
-            list item 3
-        </li>
-    </ol>
-
-    <script>
-        var list = document.getElementById("list");
-
-        setInterval(function () {
-            var li = document.createElement("li");
-            li.innerHTML = "list item " + (list.children.length + 1);
-            list.appendChild(li);
-        }, 2000);
-    </script>
+    <table border="1">
+        <tr id="header">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>        
+        <tr>
+            <td>John</td>
+            <td colspan="2">25</td>
+        </tr>
+        <tr>
+            <td rowspan="2">John</td>
+            <td>25</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Male</td>
+        </tr>
+    </table>
 
 </body>
 
