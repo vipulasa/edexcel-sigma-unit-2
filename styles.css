@@ -76,3 +76,15 @@ h1 {
 [paid~="not_paid"] {
   background-color: red;
 } */
+
+div > p:nth-child(3) {
+  color: blue;
+}
+
+div, h1, .green, #green, add {
+  color: green;
+}
+
+p ~ ul {
+  color: red;
+}
