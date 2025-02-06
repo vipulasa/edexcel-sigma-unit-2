@@ -1,15 +1,78 @@
-h1 {
-  color: green;
+* {
+  /* Apply styles to add elements */
 }
 
+/* Element */
+h1 {
+  color: black !important;
+  font-size: 30px;
+}
+
+/* Select By ID */
 #second-title {
   color: red;
 }
 
+/* Select by Class */
 .third-title {
-    color: yellow;
+  color: yellow;
+  font-size: 50px;
 }
 
-p {
-  color: blue;
+.green {
+  color: green;
+  font-size: 20px;
 }
+
+.red {
+  color: red;
+}
+
+#containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.container {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin-bottom: 20px;
+}
+
+.container:nth-child(even) {
+  background-color: red;
+}
+
+[first-name] {
+  background-color: green !important;
+}
+
+[first-name="kasun"] {
+  background-color: yellow !important;
+}
+
+.language {
+  display: none;
+}
+
+[lang="en"] .english {
+  display: block;
+}
+
+[lang="si"] .sinhala {
+  display: block;
+}
+
+[paid^="this"] {
+  background-color: green;
+}
+
+[href*="google"] {
+  background-color: red;
+}
+
+/* 
+[paid~="not_paid"] {
+  background-color: red;
+} */
