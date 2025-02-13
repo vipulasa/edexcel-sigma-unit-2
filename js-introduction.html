@@ -16,9 +16,31 @@
 
     <script type="text/javascript">
 
-        const user_name = prompt("What is your name?");
+        let value_one = 10;
 
-        document.getElementById("user_name").innerText = user_name;
+        let value_two = 20;
+
+        let result = value_one + value_two;
+
+        function calculate(a, b, operator) {
+            if (operator === '+') {
+                return a + b;
+            } else if (operator === '-') {
+                return a - b;
+            } else if (operator === '*') {
+                return a * b;
+            } else if (operator === '/') {
+                return a / b;
+            } else {
+                return 'Invalid operator';
+            }
+        }
+
+        const getName = function () {
+            return 'John Doe';
+        }
+
+        console.log(result, calculate(150, 300, '*'), getName());
 
     </script>
 </body>
