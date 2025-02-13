@@ -16,17 +16,43 @@
 
     <script type="text/javascript">
 
-        let x100 = 100;
-
-        let input = prompt('Enter a number: ');
-
-        console.log(x100 == input);
-
-        if(1 == 1){
+        if (1 == 1) {
             console.log('true');
-        }else{
+        } else {
             console.log('false');
         }
+
+        switch (1) {
+            case 1:
+                console.log('one');
+                break;
+            case 2:
+                console.log('two');
+                break;
+            default:
+                console.log('default');
+        }
+
+
+        for (var i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        let cars = [
+            'Toyota',
+            'Honda',
+            'BMW',
+            'Mercedes',
+            'Audi'
+        ];
+
+        cars.forEach(function (car) {
+            console.log(car);
+        });
+
+        console.log(cars);
+
+
 
     </script>
 </body>
