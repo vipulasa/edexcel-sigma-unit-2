@@ -16,31 +16,17 @@
 
     <script type="text/javascript">
 
-        let value_one = 10;
+        let x100 = 100;
 
-        let value_two = 20;
+        let input = prompt('Enter a number: ');
 
-        let result = value_one + value_two;
+        console.log(x100 == input);
 
-        function calculate(a, b, operator) {
-            if (operator === '+') {
-                return a + b;
-            } else if (operator === '-') {
-                return a - b;
-            } else if (operator === '*') {
-                return a * b;
-            } else if (operator === '/') {
-                return a / b;
-            } else {
-                return 'Invalid operator';
-            }
+        if(1 == 1){
+            console.log('true');
+        }else{
+            console.log('false');
         }
-
-        const getName = function () {
-            return 'John Doe';
-        }
-
-        console.log(result, calculate(150, 300, '*'), getName());
 
     </script>
 </body>
