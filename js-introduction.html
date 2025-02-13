@@ -5,61 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Intro</title>
-
     <style>
-        .container,
-        .container_2 {
-            width: 500px;
-            height: 200px;
-            background-color: red;
-            overflow: hidden;
-            position: relative;
-        }
 
-        .container_2 {
-            background-color: blue;
-        }
-
-        #read-more,
-        .container_2 button {
-            position: absolute;
-            bottom: 0;
-        }
     </style>
 </head>
 
 <body>
 
-    <h1>Test</h1>
-
-    <div class="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
-        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
-        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
-        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
-        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
-        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
-
-        <button id="read-more"> Read More </button>
-    </div>
+    <h1>Hello, <span id="user_name"></span></h1>
 
     <script type="text/javascript">
-        document
-            .getElementById('read-more')
-            .addEventListener('click', function () {
-                document
-                    .querySelector('.container').style.height = 'auto';
-            });
-    </script>
 
+        const user_name = prompt("What is your name?");
+
+        document.getElementById("user_name").innerText = user_name;
+
+    </script>
 </body>
 
 </html>
