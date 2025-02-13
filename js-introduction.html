@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Intro</title>
+
+    <style>
+        .container, .container_2 {
+            width: 500px;
+            height: 200px;
+            background-color: red;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container_2 {
+            background-color: blue;
+        }
+
+        #read-more, .container_2 button {
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+
+    <h1>Test</h1>
+
+    <div class="container_2" 
+        x-data="{ show: false }" 
+        x-bind:style="show ? 'height: auto' : 'height: 200px'">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        <button type="button" x-on:click="show = !show"> Read More </button>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas unde culpa, deleniti reprehenderit quis cumque
+        iure expedita voluptatem necessitatibus est sequi nisi ab iste explicabo quaerat beatae consequuntur corporis.
+
+        <button id="read-more"> Read More </button>
+    </div>
+
+    <script type="text/javascript">
+        document
+            .getElementById('read-more')
+            .addEventListener('click', function () {
+                document
+                    .querySelector('.container')
+                    .style.height = 'auto';
+            });
+    </script>
+
+</body>
+
+</html>

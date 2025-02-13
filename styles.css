@@ -81,10 +81,34 @@ div > p:nth-child(3) {
   color: blue;
 }
 
-div, h1, .green, #green, add {
+/* div, h1, .green, #green, add {
   color: green;
-}
+} */
 
 p ~ ul {
   color: red;
+}
+
+.hover-container {
+  width:200px;
+  height:200px;
+  background-color: red;
+  margin: 0 auto;
+  color: red;
+}
+
+.hover-container:hover {
+  background-color: green;
+}
+
+.hover-container:hover p {
+  color: white;
+}
+
+#range[value=100] .hover-container {
+  background-color: green;
+}
+
+#range:out-of-range .hover-container {
+  background-color: red;
 }
