@@ -5,54 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Intro</title>
-    <style>
-
-    </style>
+    <style></style>
 </head>
 
 <body>
 
     <h1>Hello, <span id="user_name"></span></h1>
 
+    <form action="" method="get">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+
+        <br>
+        <br>
+        <textarea name="bio" id="bio"></textarea>
+        <br>
+        <br>
+        <select name="category" id="category">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
     <script type="text/javascript">
 
-        if (1 == 1) {
-            console.log('true');
-        } else {
-            console.log('false');
-        }
-
-        switch (1) {
-            case 1:
-                console.log('one');
-                break;
-            case 2:
-                console.log('two');
-                break;
-            default:
-                console.log('default');
-        }
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 
-        for (var i = 1; i <= 5; i++) {
-            console.log(i);
-        }
+        let name = document.getElementById('name');
 
-        let cars = [
-            'Toyota',
-            'Honda',
-            'BMW',
-            'Mercedes',
-            'Audi'
-        ];
+        name.addEventListener('input', function (event) {
 
-        cars.forEach(function (car) {
-            console.log(car);
+            // regex pattern to check if the value is only alphabets
+            let pattern = /^[0-9]{3}$/;
+            // let pattern = /(a|b)c+$/;
+
+            console.log(pattern.test(event.target.value));
+
+
+            console.log(event.target.value);
         });
 
-        console.log(cars);
+        document.getElementById('category')
+            .addEventListener('change', function (event) {
+
+                let validation = /^(one|two|three)$/i;
+
+                console.log(validation.test(event.target.value));
+
+            });
+
+        console.log(name);
 
 
+
+
+
+
+
+
+
+
+        // // Get the form element
+        // const form = document.querySelector('form');
+
+        // // Add an event listener to the form
+        // form.addEventListener('submit', function(event) {
+        //     // Prevent the default form submission
+        //     event.preventDefault();
+
+        //     // Get the input element
+        //     const input = document.querySelector('input');
+
+        //     // Get the value of the input element
+        //     const name = input.value;
+
+        //     // Get the span element
+        //     const span = document.querySelector('span');
+
+        //     // Set the text content of the span element
+        //     span.textContent = name;
+
+        //     // Clear the input element
+        //     input.value = '';
+        // });
 
     </script>
 </body>
