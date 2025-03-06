@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slideshow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .container {
+            width: 1000px;
+            height: 400px;
+            background-color: black;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/images/image-1.jpg" id="slide">
+    </div>
+
+    <script>
+        const images = [
+            '/images/image-1.jpg',
+            '/images/image-2.jpg',
+            '/images/image-3.jpg',
+        ];
+
+        let index = 0;
+
+        setInterval(function(){
+
+            let slide = document.getElementById('slide');
+
+            slide.src = images[index];
+
+            console.log(index);
+
+            if(index < images.length - 1){
+                index = index + 1;
+            } else {
+                index = 0;
+            }
+
+        }, 1000);
+
+
+        // let slide = document.getElementById('slide');
+
+        // slide.src = images[1];
+
+
+    </script>
+</body>
+</html>

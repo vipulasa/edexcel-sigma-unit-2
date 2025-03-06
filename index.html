@@ -31,6 +31,8 @@
         //     ['Ford', 'Chevrolet', 'Dodge']
         // ];
 
+        // console.log(cars[2][1]);
+
         // // cars.pop();
         // // cars.pop();
         // // cars.pop();
@@ -39,23 +41,107 @@
 
         // console.log(cars, cars.length);
 
+        // let total = 0;
 
-        let total = 0;
+        // for (let i = 9; i >= 0; i--) {
 
-        for (let i = 0; i < 10; i++) {
-            total += i;
-        }
+        //     if(i === 7){
+        //         continue;
+        //     }
 
-        function calculate(number_one, number_two){
-            return number_one + number_two;
-        }
+        //     // total += i;
+        //     total = total + i;
+        //     console.log(i);
 
-        console.log(calculate(10, 20));
+        //     if (i === 5) {
+        //         break;
+        //     }
+        // }
 
 
+        // let i = 0;
+        // while (i < 10) {
+        //     total = total + i;
+        //     i++;
+
+        //     console.log(i);
+        // }
+
+        // let i = 0;
+        // do {
+        //     total = total + i;
+        //     i++;
+        //     console.log(i);
+        // } while (i < 10);
 
 
+        // let number = '';
 
+        // while(number.length <= 0){
+        //     number = prompt('Enter a number');
+        // }
+
+        // do {
+        //     number = prompt('Enter a number');
+        // } while (number.length <= 0);
+
+        // console.log(total);
+
+        // let cars = [
+        //     'Toyota', 'Nissan', 'Honda', 'BMW', 'Mercedes', 'Audi', 'Ford', 'Chevrolet', 'Dodge'
+        // ];
+
+        // for(let i = 0; i < cars.length; i++){
+        //     console.log(cars[i]);
+        // }
+
+        // let cars_2d = [
+        //     ['Toyota', 'Nissan', 'Honda'],
+        //     ['BMW', 'Mercedes', 'Audi'],
+        //     ['Ford', 'Chevrolet', 'Dodge']
+        // ];
+
+        // for(let i = 0; i < cars_2d.length; i++){
+        //     for(let j = 0; j < cars_2d[i].length; j++){
+        //         console.log(cars_2d[i][j]);
+        //     }
+        // }
+
+        // let cars = [
+        //     'Toyota', 'Nissan', 'Honda', 'BMW', 'Mercedes', 'Audi', 'Ford', 'Chevrolet', 'Dodge'
+        // ];
+
+        // for (let car of cars) {
+        //     console.log(car);
+        // }
+
+        // for(let i = 0; i < cars.length; i++){
+        //     console.log(cars[i]);
+        // }
+
+        // cars.forEach(function(car, index){
+        //     // skip the 4th element
+        //     if(index === 3){
+        //         return;
+        //     }
+        //     console.log(car, index);
+        // });
+
+        const student = {
+            name: 'John Doe',
+            age: 25,
+            address: {
+                street: '123 Main St',
+                city: 'New York',
+                state: 'NY'
+            },
+            subjects: ['Math', 'Science', 'English'],
+            greet: function () {
+                return "Hello, my name is " + this.name;
+            }
+        };
+
+        console.log(student.greet());
 
     </script>
 </body>
