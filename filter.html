@@ -37,12 +37,16 @@
 
         // find a value based on a condition
         const result = carArrayObjectList.find(function(car){        
-            return car.year === 2026;
+            return car.year === 2023;
         });
 
-        
+        // filter values based on a condition
+        const cars2023 = carArrayObjectList.filter(function(car){
+            return car.year === 2023;
+        });
 
-        console.log(result);
+
+        console.log(result, cars2023);
 
 
     </script>
