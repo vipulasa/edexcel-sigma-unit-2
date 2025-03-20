@@ -21,32 +21,63 @@
         ];
 
         const carArrayObjectList = [
-            {name: 'Corolla', year: 2020},
+            {name: 'Corolla', year: 2023},
             {name: 'Camry', year: 2021},
-            {name: 'Rav4', year: 2022},
+            {name: 'Rav4', year: 2020},
             {name: 'Sentra', year: 2023},
-            {name: 'Altima', year: 2023},
+            {name: 'Altima', year: 2024},
             {name: 'Maxima', year: 2023},
             {name: 'Civic', year: 2026},
             {name: 'Accord', year: 2027},
             {name: 'Pilot', year: 2028},
         ];
 
-        // get the index of a specific value
-        cars.indexOf('Rav4')
+        // // get the index of a specific value
+        // cars.indexOf('Rav4')
 
-        // find a value based on a condition
-        const result = carArrayObjectList.find(function(car){        
-            return car.year === 2023;
-        });
+        // // find a value based on a condition
+        // const result = carArrayObjectList.find(function(car){        
+        //     return car.year === 2023;
+        // });
 
-        // filter values based on a condition
-        const cars2023 = carArrayObjectList.filter(function(car){
-            return car.year === 2023;
-        });
+        // // filter values based on a condition
+        // const cars2023 = carArrayObjectList.filter(function(car){
+        //     return car.year === 2023;
+        // });
 
+        // // sort according to the alphabatical order
+        // cars.sort();
 
-        console.log(result, cars2023);
+        // sort according to the year
+        // carArrayObjectList.sort(function(a, b){    
+        //     // a == second index
+        //     // b == first index
+        //     return a.year - b.year;
+        // });
+
+        
+
+        // sort the year with using bubble sort
+        for (let i = 0; i < carArrayObjectList.length; i++) {
+
+                for (let j = 0; j < carArrayObjectList.length - i - 1; j++) {
+
+                    if (carArrayObjectList[j].year < carArrayObjectList[j + 1].year) {
+
+                        let temp = carArrayObjectList[j];
+
+                        carArrayObjectList[j] = carArrayObjectList[j + 1];
+
+                        carArrayObjectList[j + 1] = temp;
+
+                    }
+                }
+            }
+        
+
+        console.log(carArrayObjectList);
+
+        
 
 
     </script>
