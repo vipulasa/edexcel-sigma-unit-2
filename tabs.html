@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabs</title>
+
+    <style>
+        .tab {
+            display: none;
+        }
+
+        .tab:first-of-type {
+            display: block;
+        }
+
+        .handle {
+            cursor: pointer;
+        }
+
+        /* .tab:target {
+            display: block;
+        }
+
+        .tab:not(:target) {
+            display: none;
+        } */
+    </style>
 </head>
+
 <body>
+
+    <ul>
+        <li class="handle">
+            Tab 1
+        </li>
+        <li class="handle">
+            Tab 2
+        </li>
+        <li class="handle">
+            Tab 3
+        </li>
+        <li class="handle">
+            Tab 4
+        </li>
+    </ul>
+
+    <div id="tab1" class="tab">
+        <h1>Tab 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        </p>
+    </div>
+
+    <div id="tab2" class="tab">
+        <h1>Tab 2</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        </p>
+    </div>
+
+    <div id="tab3" class="tab">
+        <h1>Tab 3</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        </p>
+    </div>
     
+    <div class="tab">
+        <h1>Tab 4</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        </p>
+    </div>
+
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const handles = document.querySelectorAll('.handle');
+
+        handles.forEach(function (handle, index) {
+            handle.addEventListener('click', function (e) {       
+                
+                // set a id to the hash
+                window.location.hash = index + 1;
+                
+                tabs.forEach(function (tab) {
+                    tab.style.display = 'none';
+                });
+                tabs[index].style.display = 'block';
+            });        
+        });
+
+        // check if the hash is set
+        if (window.location.hash) {
+            const index = window.location.hash.replace('#', '') - 1;
+            tabs.forEach(function (tab) {
+                tab.style.display = 'none';
+            });
+            tabs[index].style.display = 'block';
+        }
+    </script>
+
+
 </body>
+
 </html>

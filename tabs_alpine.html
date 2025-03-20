@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+        /* .tab {
+            display: none;
+        }
+
+        .tab:first-of-type {
+            display: block;
+        }
+
+        .handle {
+            cursor: pointer;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div x-data="{
+            test: 'test',
+            tabs : [{
+                'title': 'Tab 1',
+                'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+            },
+            {
+                'title': 'Tab 2',
+                'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+            },
+            {
+                'title': 'Tab 3',
+                'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+            },
+            {
+                'title': 'Tab 4',
+                'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+            }], 
+            activeTab: 0
+    }">
+
+        <ul>
+            <template x-for="(tab, index) in tabs" :key="index">
+                <li class="handle" x-on:click="activeTab = index">
+                    <span x-text="tab.title"></span>
+                </li>
+            </template>
+        </ul>
+
+        <template x-for="(tab, index) in tabs" :key="index">
+            <div class="tab" x-show="activeTab === index">
+                <h1 x-text="tab.title"></h1>
+                <p x-text="tab.content"></p>
+            </div>
+        </template>
+    </div>
+
+</body>
+
+</html>

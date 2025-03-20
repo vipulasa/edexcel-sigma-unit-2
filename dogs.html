@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f3f3f3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            float: left; margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div x-data="Dogs">
+        <h2>Total Breeds: <span x-text="breeds.length"></span></h2>
+
+        <img x-bind:src="image" alt="">
+
+        <ul>
+            <template x-for="(breed, index) in breeds" :key="index">
+                <li>
+                    <a x-on:click="showPhoto(breed)" x-text="breed"></a>
+                </li>
+            </template>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('Dogs', () => ({
+                breeds: [],
+                image: null,
+
+                showPhoto(breed) {
+                    fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.image = data.message;
+                        })
+                        .catch(error => console.error("Error fetching photo:", error));
+                },
+
+                getBreeds() {
+                    fetch('https://dog.ceo/api/breeds/list/all')
+                        .then(response => response.json())
+                        .then(data => {
+                            this.breeds = Object.keys(data.message);
+                        })
+                        .catch(error => console.error("Error fetching breeds:", error));
+                },
+
+                init() {
+                    this.getBreeds();
+                }
+            }));
+        });
+    </script>
+
+</body>
+
+</html>
