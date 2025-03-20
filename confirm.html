@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="button" id="alert_btn">
+        Alert
+    </button>
+
+    <button type="button" id="confirm_btn">
+        Confirm
+    </button>
+
+    <script>
+        const alert_btn = document.getElementById('alert_btn');
+        alert_btn.addEventListener('click', function () {
+            // alert('Hello World \nThis is a test \nthis is another new line');
+            // const test = 'Hello';
+            try {
+
+                console.log(test);
+
+            } catch (error) {
+                console.log('Oops something happend');
+            }
+
+            const test2 = 'World';
+            console.log(test2);
+        });
+
+        const confirm_btn = document.getElementById('confirm_btn');
+        confirm_btn.addEventListener('click', function () {
+            const response = confirm('What do you want to do today? \nDo you want to go out?');
+            if (response) {
+                alert('something');
+            } else {
+                alert('nothing');
+            }
+        });
+
+        // error handling
+        try {
+            // do some work here which if an error is thrown, it will be caught
+        } catch (error) {
+            console.log(error);
+        }
+
+
+
+        const number_one = 1;
+        const number_two = '1';
+
+        function calculate(number_one, number_two) {
+            // check if the values are numbers
+            if (isNaN(number_one) || isNaN(number_two)) {
+                throw new Error('Both values must be numbers');
+            }
+
+            return number_one + number_two;
+        }
+
+        const numbers = [
+            [1, 2],
+            [1, 'test'],
+            [1, 200]
+        ];
+
+        numbers.forEach(number => {
+            try {
+                console.log(calculate(number[0], number[1]));
+            } catch (error) {
+                console.log('Error: ' + error.message + ' for ' + number[0] + ' and ' + number[1]);
+            }
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
