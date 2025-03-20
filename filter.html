@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering</title>
+</head>
+<body>
+    <script>
+
+        const cars = [
+            'Corolla',
+            'Camry',
+            'Rav4',
+            'Sentra',
+            'Altima',
+            'Maxima',
+            'Civic',
+            'Accord',
+            'Pilot',
+        ];
+
+        const carArrayObjectList = [
+            {name: 'Corolla', year: 2020},
+            {name: 'Camry', year: 2021},
+            {name: 'Rav4', year: 2022},
+            {name: 'Sentra', year: 2023},
+            {name: 'Altima', year: 2023},
+            {name: 'Maxima', year: 2023},
+            {name: 'Civic', year: 2026},
+            {name: 'Accord', year: 2027},
+            {name: 'Pilot', year: 2028},
+        ];
+
+        // get the index of a specific value
+        cars.indexOf('Rav4')
+
+        // find a value based on a condition
+        const result = carArrayObjectList.find(function(car){        
+            return car.year === 2026;
+        });
+
+        console.log(result);
+
+
+    </script>
+</body>
+</html>
